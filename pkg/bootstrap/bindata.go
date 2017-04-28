@@ -1027,7 +1027,7 @@ var _examplesImageStreamsImageStreamsRhel7Json = []byte(`{
             },
             "from": {
               "kind": "ImageStreamTag",
-              "name": "4"
+              "name": "6"
             }
           },
           {
@@ -1060,6 +1060,22 @@ var _examplesImageStreamsImageStreamsRhel7Json = []byte(`{
             "from": {
               "kind": "DockerImage",
               "name": "registry.access.redhat.com/rhscl/nodejs-4-rhel7:latest"
+            }
+          },
+          {
+            "name": "6",
+            "annotations": {
+              "openshift.io/display-name": "Node.js 6",
+              "description": "Build and run Node.js 6 applications on RHEL 7. For more information about using this builder image, including OpenShift considerations, see https://github.com/sclorg/s2i-nodejs-container.",
+              "iconClass": "icon-nodejs",
+              "tags": "builder,nodejs",
+              "supports":"nodejs:6,nodejs",
+              "version": "6",
+              "sampleRepo": "https://github.com/openshift/nodejs-ex.git"
+            },
+            "from": {
+              "kind": "DockerImage",
+              "name": "registry.access.redhat.com/rhscl/nodejs-6-rhel7:latest"
             }
           }
         ]
@@ -1177,7 +1193,7 @@ var _examplesImageStreamsImageStreamsRhel7Json = []byte(`{
               "tags": "hidden,builder,php",
               "supports":"php:5.5,php",
               "version": "5.5",
-              "sampleRepo": "https://github.com/openshift/cakephp-ex.git"              
+              "sampleRepo": "https://github.com/openshift/cakephp-ex.git"
             },
             "from": {
               "kind": "DockerImage",
@@ -9616,7 +9632,7 @@ var _examplesQuickstartsNodejsMongodbPersistentJson = []byte(`{
             "from": {
               "kind": "ImageStreamTag",
               "namespace": "${NAMESPACE}",
-              "name": "nodejs:4"
+              "name": "nodejs:6"
             },
             "env":  [
               {
@@ -10178,7 +10194,7 @@ var _examplesQuickstartsNodejsMongodbJson = []byte(`{
             "from": {
               "kind": "ImageStreamTag",
               "namespace": "${NAMESPACE}",
-              "name": "nodejs:4"
+              "name": "nodejs:6"
             },
             "env": [
               {
